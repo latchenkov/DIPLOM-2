@@ -38,13 +38,15 @@ button.close_alert {
     position: fixed;
     top: 7%;
     width: 30%;
-    height: 25px;
+    //height: 25px;
     z-index: 200;
+    padding: 8px;
 }
 #informer_text {
     text-align: center;
-    position: relative;
-    top: -10px;
+    //position: relative;
+    //top: -10px;
+    margin: 0;
 }
 .form-group.with-help-block {
     margin-bottom: 7px;

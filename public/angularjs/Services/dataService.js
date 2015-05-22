@@ -6,7 +6,10 @@ adsManagementApp.factory('Data', function ($http, $q) {
                                 $http.get('home/location-list').
                                 success(function(data) {
                                     deferred.resolve(data);
-                                });
+                                }).
+                                error(function(status) {
+                                    deferred.reject(status);
+                                });        
                             return deferred.promise;
                         },
         getCategoryList: function(){
@@ -14,6 +17,9 @@ adsManagementApp.factory('Data', function ($http, $q) {
                                 $http.get('home/category-list').
                                 success(function(data) {
                                     deferred.resolve(data);
+                                }).
+                                error(function(status) {
+                                    deferred.reject(status);
                                 });
                             return deferred.promise;
                         },
@@ -22,6 +28,9 @@ adsManagementApp.factory('Data', function ($http, $q) {
                                 $http.get('home/all-ads').
                                 success(function(data) {
                                     deferred.resolve(data);
+                                }).
+                                error(function(status) {
+                                    deferred.reject(status);
                                 });
                             return deferred.promise;
                         },

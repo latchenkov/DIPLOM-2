@@ -37,7 +37,8 @@ adsManagementApp.factory('Action', function ($timeout, defaultValue, Informer) {
                     else {
                         Informer.show ( $scope, 
                                         'error', 
-                                        'Внимание! При сохранении объявления что-то пошло не так.');
+                                        'Внимание! При сохранении объявления что-то пошло не так.<br />\n\
+                                         Проверьте соединение с базой данных.');
                     }
                  },                   
 // Функция удаления объявления в случае ошибочного ответа сервера    
@@ -60,10 +61,11 @@ adsManagementApp.factory('Action', function ($timeout, defaultValue, Informer) {
                             Informer.show ( $scope, answer.status, answer.message);
                         } 
                     },
-// Функция удаления объявления в случае ошибочного ответа сервера                    
-    errorRemoveAd: function ($scope){
+// Функция в случае ошибочного ответа сервера                    
+    errorInform: function ($scope){
                         Informer.show ( $scope, 'error', 
-                                             'Внимание! При удалении объявления что-то пошло не так.');
+                                             'Упс! Что-то пошло не так.<br />\n\
+                                              Проверьте соединение с базой данных.');
                    },
 // Показ объявления в форме
     showAd: function (form, index, adsstore, $scope){

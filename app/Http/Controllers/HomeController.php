@@ -19,7 +19,16 @@ class HomeController extends Controller {
         }
        
         public function getAllAds(){
-            return Ad::getAllAds();
+            $data = Ad::all()->sortByDesc('id')->values();
+                if ($data->isEmpty()){
+                    $result['status']='warning';
+                    $result['message'] = "Внимание! В базе данных нет объявлений.";
+                }
+                else {
+                    $result['status'] = 'success';
+                    $result['data'] = $data;
+                }
+            return response()->json($result);
         }
 
 }

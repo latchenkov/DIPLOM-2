@@ -37,7 +37,7 @@ adsManagementApp.controller('mainController', function($scope, $http, $timeout, 
                         Action.successRemoveAd (answer, form, index, $scope);
                     },
                     function(){
-                        Action.errorRemoveAd ($scope);
+                        Action.errorInform ($scope);
                     }
                 );
     };

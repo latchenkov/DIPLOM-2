@@ -33,6 +33,7 @@
 
 <!-- AngularJS -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-sanitize.min.js"></script>
 <script src="{{ asset('angularjs/adsManagementApp.js') }}"></script>
 <script src="{{ asset('angularjs/Services/dataService.js') }}"></script>
 <script src="{{ asset('angularjs/Services/actionService.js') }}"></script>

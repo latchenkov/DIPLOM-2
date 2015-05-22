@@ -90,11 +90,11 @@
         </div>
                         
         <div class="form-group">
-            <div class="col-sm-5">
+            <div class="col-sm-offset-1 col-sm-5">
                 <button id="submit" type="submit" ng-click="save(ad, adForm)"  class="btn btn-success" style="width: 180px"><strong ng-bind="buttontext"></strong></button>
             </div>
-            <div class="col-sm-offset-2 col-sm-5">
-                <button id="resetForm" type="button" ng-click="resetForm(adForm)" class="btn btn-warning" style="width: 150px"><strong>Очистить форму</strong></button>
+            <div class="col-sm-offset-1 col-sm-5">
+                <button id="resetForm" type="button" ng-click="resetForm(adForm)" class="btn btn-warning" style="width: 180px"><strong>Очистить форму</strong></button>
             </div>
         </div>
 </form>
